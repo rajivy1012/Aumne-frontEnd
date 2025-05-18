@@ -1,12 +1,96 @@
-# React + Vite
+# 🖼️ Frontend – Aumne Assignment (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React-based frontend for the form generation system. It allows users to upload `.txt` files, view generated questions, preview them in form layout, and simulate sharing via email.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Setup Instructions
 
-## Expanding the ESLint configuration
+### 📦 Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Node.js v18+
+
+### 🔧 Installation
+
+```bash
+cd frontend
+npm install
+```
+
+### 🚀 Start Development Server
+
+```bash
+npm run dev
+```
+
+Visit: `http://localhost:5173`
+
+---
+
+## 🧭 File Structure
+
+```
+frontend/
+├── src/
+│   ├── App.jsx             # Main UI logic
+│   ├── FormPreview.jsx     # Question form page
+│   └── main.jsx            # Router setup
+├── public/
+│   └── _redirects          # Vercel SPA route handling
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+---
+
+## 🧠 Features
+
+* Upload `.txt` file
+* Generate questions from backend
+* View questions with options
+* Click **Approve** to generate `/form-preview` page
+* Click **Share** to simulate email (logs to console)
+
+---
+
+## 🔁 Routing Notes (for Vercel / SPA Hosting)
+
+To prevent 404 on deep links:
+
+1. Create `public/_redirects`:
+
+```
+/*    /index.html   200
+```
+
+2. Rebuild and deploy:
+
+```bash
+npm run build
+```
+
+---
+
+## 🧪 Simulated Emails
+
+After approval, a "Share" button logs emails to console for these test emails:
+
+* `test1@example.com`
+* `test2@example.com`
+
+---
+
+## 🔧 Technologies
+
+* React + Vite
+* TailwindCSS
+* Framer Motion
+* React Router DOM
+
+---
+
+## ✨ Future Enhancements
+
+* Use EmailJS to send actual emails
+* Add form response capture and submission handling
