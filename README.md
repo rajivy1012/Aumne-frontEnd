@@ -41,6 +41,8 @@ frontend/
 ├── vite.config.js
 └── package.json
 ```
+## Workflow
+![Workflow diagram](https://github.com/user-attachments/assets/cbcfcf28-8560-4756-b343-6214461840a9)
 
 ---
 
