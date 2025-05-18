@@ -117,7 +117,7 @@ export default function App() {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:3000/surveys/upload', formData);
+      const res = await axios.post('https://aumne-backend.onrender.com/surveys/upload', formData);
       setQuestionList(res?.data?.questions || []);
       console.log(res?.data?.questions);
     } catch (err) {
